@@ -16,8 +16,10 @@ def llamar(nombre):
 
 @app.route('/repeat/<int:num>/<string:name>')
 def repeet(num, name):
-        return name * num
-
+        output = ''
+        for i in range(0, num):
+            output += '<p>'+name+'</p>'
+        return output
 
 
 if __name__ == "__main__":
